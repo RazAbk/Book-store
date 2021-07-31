@@ -228,5 +228,4 @@ function onNextPage(indicator) {
 function onFilterBy(filterBy) {
   filterBooks(filterBy);
   renderBooks();
-  //aa
 }
