@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Book Shop</title>
+  </head>
+  <body onload="init()">
+
+    
+
+    <div class="container">
+        <div class="inside-header">
+            <h2>ʙᴏᴏᴋꜱ ꜱᴛᴏʀᴇ</h2>
+        </div>
+
+        <div class="content">
+            <!-- Table goes here -->
+        </div>
+
+        <div class="page-nav">
+            <button onclick="onNextPage('-')" class="next-btn">◀</button>
+            <div class="page-idx"></div>
+            <button onclick="onNextPage('+')" class="next-btn">▶</button>
+        </div>
+          
+
+        
+    </div>
+
+    <div class="book-read">
+        <!-- Book Read goes here -->
+    </div>
+    
+    <script src="js/util-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controler.js"></script>
+
+  </body>
+</html>
