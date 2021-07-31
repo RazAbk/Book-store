@@ -8,7 +8,7 @@ function renderBooks() {
   gBooks = loadFromStorage("booksDb");
   
   // In case no books, add books to show
-  if(gBooks.length === 0 || !gBooks){
+  if(!gBooks || gBooks.length === 0){
     gBooks = [
   {
     id: "x68xde",
