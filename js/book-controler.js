@@ -6,6 +6,57 @@ function init() {
 
 function renderBooks() {
   gBooks = loadFromStorage("booksDb");
+  
+  // In case no books, add books to show
+  if(gBooks.length === 0 || !gBooks){
+    gBooks = [
+  {
+    id: "x68xde",
+    title: "First friends",
+    price: "19",
+    img: "https://images-na.ssl-images-amazon.com/images/I/51d+JBAhLhL._SY344_BO1,204,203,200_.jpg",
+    rating: 3,
+  },
+  {
+    id: "oAzI70",
+    title: "How I saved the world",
+    price: 12,
+    img: "https://images-na.ssl-images-amazon.com/images/I/411j0TUdamL._SX329_BO1,204,203,200_.jpg",
+    rating: 3,
+  },
+  {
+    id: "wGjZ0K",
+    title: "I alone can fix it",
+    price: 29.9,
+    img: "https://images-na.ssl-images-amazon.com/images/I/41ItBEAc3kS._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+    rating: 4,
+  },
+  {
+    id: "beR6Rm",
+    title: "If animals kissed good night",
+    price: 5,
+    img: "https://images-na.ssl-images-amazon.com/images/I/51PRQuO-xjL._SX218_BO1,204,203,200_QL40_FMwebp_.jpg",
+    rating: 2,
+  },
+  {
+    id: "Yt7h7l",
+    title: "The Cruelty",
+    price: "16",
+    img: "https://images-na.ssl-images-amazon.com/images/I/41UEsIyJR-S._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+    rating: 3,
+  },
+  {
+    id: "DEuucl",
+    title: "We did win this election",
+    price: 24.5,
+    img: "https://images-na.ssl-images-amazon.com/images/I/614mb3xlctS._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",
+    rating: 3,
+  },
+];
+saveToStorage('booksDb', gBooks);
+  }
+
+
   var books = getBooksByPageSize();
 
   var elPageIdx = document.querySelector(".page-idx");
